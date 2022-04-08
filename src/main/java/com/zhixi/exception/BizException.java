@@ -35,4 +35,14 @@ public class BizException extends RuntimeException {
     public BizException(ExceptionCodeEnum error) {
         this.error = error;
     }
+
+    /**
+     * 构造器，传入错误枚举和错误信息
+     * @param errorParam 错误枚举
+     * @param desc 错误信息
+     */
+    public BizException(ExceptionCodeEnum errorParam, String desc) {
+        super(desc);
+        this.error = errorParam;
+    }
 }
